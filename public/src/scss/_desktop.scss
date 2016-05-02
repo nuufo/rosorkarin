@@ -1,0 +1,16 @@
+.bloopers {
+	.blooper-text{
+		.text{
+			display: block;
+			opacity:0; 
+			height: 0;
+			transition: opacity 1s;
+		}
+		&:hover {
+			.text {
+			display:block;
+			opacity: 1;
+			}
+		}
+	}
+}

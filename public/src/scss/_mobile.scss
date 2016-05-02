@@ -1,0 +1,72 @@
+@import 'mixins';
+.wrapper {
+	max-width: 640px;
+	margin: 0 auto;
+	outline: 1 px solid black; 
+	overflow: hidden;
+}
+
+.header {
+	background-color: $black;
+	color: $primaryColor;
+	
+	.inner {
+		padding: 10px;
+		@include clearfix; /*Denna skapas i mixins, fett*/
+	}
+	.sloga, .menu-container {
+		display:none;
+	}
+	.logo, .mobile-toggle {
+		float: left;
+		text-align: right;
+	}
+ 
+	.logo {
+		width: 70%;
+	}
+	.mobile-toggle {
+		width: 30%;
+	}
+}
+
+.hero-img {
+	
+	width: 100%; 
+	max-height: 200px; /*Kolla vad david har sagt för mått.*/
+	min-height: 100px;
+	@include bgimg;
+
+}
+
+.bloopers {
+	@include clearfix;
+	.blooper {
+		width: 50%;
+		float: left;
+		height: 300px;
+		outline: 1px solid red;
+		position: relative;
+		.bg-image {
+			@include bgimg;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+		.blooper-text {
+			.heading {
+				background-color: transparentize($primaryColor, 0.7);
+				min-height: 35px;
+				text-align: center;
+				}
+			
+			.text {
+				display: none;
+				background-color: $white;
+			}
+		}
+	}
+	
+}

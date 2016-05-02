@@ -1,0 +1,21 @@
+$primaryColor: #d41378;
+$black : #000;
+$white: #fff;
+
+
+@mixin clearfix {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: borh;
+	}
+}
+
+@mixin bgimg {
+		background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url('../img/hero-background-dummy.jpg');
+}
